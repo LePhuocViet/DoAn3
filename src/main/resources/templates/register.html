@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/register.css}"/>
+    <title>Regiter Page</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-container">
+        <img th:src="@{/img/background.jpg}" alt="Login Image">
+    </div>
+    <div class="regiter-container">
+        <div class="regiter-form">
+            <h5>Đăng ký</h5>
+            <h6>Bằng cách tiếp tục bạn đang thiết lập tài khoản</h6>
+            <h6>FL và đồng ý các điều khoản với chúng tôi</h6>
+            <form th:action="@{/Login}" method="get">
+            <div class="input-group">
+                <button type="submit" class="button-title" >Bạn đã có tài khoản ?</button>
+            </div>
+            </form>
+            <div class="or-divider">
+                <hr class="left-divider">
+                <span>OR</span>
+                <hr class="right-divider">
+            </div>
+            <form th:action="@{/Register_checkin}" th:object="${newuser}" method="post">
+            <div class="input-group">
+                <span class="Error" th:if="${#fields.hasErrors('matk')}" th:errors="*{matk}"></span>
+                <input type="text"  th:field="*{matk}" placeholder="Tên đăng nhập" required>
+
+            </div>
+            <div class="input-group">
+                <span class="Error" th:if="${#fields.hasErrors('matkhau')}" th:errors="*{matkhau}"></span>
+                <input type="password"  th:field="*{matkhau}"placeholder="Mật khẩu" required>
+
+            </div>
+                <input type="hidden"   th:field="*{active}" th:value="1">
+            <div class="input-group">
+                <input type="password"  name="rematkhau" placeholder="Nhập lại mật khẩu" required>
+            </div>
+            <div class="input-group">
+                <input type="text"  name="email" placeholder="Nhập Gmail" required>
+                <h6>Gửi</h6>
+            </div>
+            <div class="input-group">
+                <input type="number" id="mxn" placeholder="Mã xác nhận" required>
+            </div>
+
+            <button type="submit">Đăng ký</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

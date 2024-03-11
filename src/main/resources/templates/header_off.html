@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+
+>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/bass.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+    <link rel="stylesheet" th:href="@{/css/all.css}"/>
+    <link rel="stylesheet" th:href="@{/font/fontawesome-free-6.4.0-web/css/all.css}">
+    <link rel="stylesheet" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css}" />
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}">
+    <link th:href="@{https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap}" rel="stylesheet" />
+
+</head>
+
+<body>
+                <!--header__nav-->
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-list-item header__nav-list-item--cursor ">
+                            <img th:src="@{/img/background.jpg}" class="header__logo-img"></img>
+                        </li>
+                    </ul>
+                    <ul class="header__nav-list ">
+                        <!--header__nav-list--login-->
+                        <li class="header__nav-list-login">
+                            <i class="header__nav-icon fa-solid fa-bell"></i>
+
+                        </li>
+
+                         <li class="header__nav-list-login">
+                            <i class="header__nav-icon fa-solid fa-right-to-bracket"></i>
+                            <a th:href="@{/Login}" class="header__nav-list-login-link">Đăng Nhập</a>
+                        </li>
+                        <li class="header__nav-list-logout">
+                            <a th:href="@{/Register}" class="header__nav-list-logout-link">Đăng Ký</a>
+                     </li>
+
+                    </ul>
+                </nav>
+</body>
+
+</html>

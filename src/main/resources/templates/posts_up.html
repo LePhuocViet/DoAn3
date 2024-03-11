@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <style>
+
+        .header {
+
+            background-color: #ffffff;
+            color: #000000;
+            padding: 0px 0px;
+            display: flex;
+            padding-left: 150px;
+            padding-right: 150px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header a i{
+            color: #000000;
+
+        }
+        .name{
+            margin-left: 1px;
+        }
+        .message-icon{
+            margin-left: 100px;
+        }
+
+        .search-bar {
+            margin: 10px;
+            border-color: #000000;
+        }
+
+        .search-input {
+            width: 80%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .user-icon {
+            color: #000000;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 50px;
+
+        }
+        .name{
+            font-size: 20px;
+        }
+
+        .create-section {
+            background-color: #7c7777;
+
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .create-post {
+            margin-left: 10%;
+            flex: 70%;
+            margin-right: 20px;
+        }
+
+        .create-avatar {
+            flex: 20%;
+            margin-right: 10%;
+        }
+
+        .form-container {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .submit-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.submit-buttons button {
+
+    margin-left: 10px;
+}
+
+        .form-container label {
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="text"],
+        .form-container textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .form-container button {
+
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgb(87, 50, 50);
+            color: white;
+            cursor: pointer;
+        }
+        .menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.menu ul li {
+    display: inline-block;
+    color: black;
+}
+.menu ul a i{
+    color: #000000;
+}
+.menu ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #000000;
+}
+
+.menu ul li:not(:last-child) {
+    margin-right: 20px;
+}
+#post-content{
+    height: 200px;
+}
+.create-avatar {
+    margin-top: 20px;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar-cover {
+    margin-bottom: 10px
+    justify-content: center;
+}
+
+.avatar-cover img {
+    width: 100%;
+
+
+}
+
+.avatar-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar-info label,
+.avatar-info textarea,
+.avatar-info button {
+    margin-bottom: 10px;
+}
+
+.avatar-info button {
+    align-self: flex-start;
+}
+.create-avatar .up {
+    background-color: rgb(169, 22, 83);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.create-avatar .up:hover {
+    background-color: rgb(41, 41, 138);
+}
+body {
+    background-color: #7c7777;
+            margin: 0;
+            padding: 0;
+
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<div class="headerr">
+    <div class="header">
+        <div class="logo">
+            <img th:src="@{/img/background.jpg}"  alt="Logo" height="50" width="50">
+        </div>
+        <div class="name"><span class="fa fa-plus"></span>
+            Create Post
+        </div>
+        <div class="search-bar"><span class="fa fa-search"></span>
+            <input type="text" class="search-input" placeholder="Search..." >
+        </div>
+
+        <div class="message-icon">
+            <i class="fa fa-envelope"></i>
+        </div>
+        <div class="notification-icon">
+            <i class="fa fa-bell"></i>
+        </div>
+        <div class="notification-icon">
+            <i class="fa fa-volume-up"> Advertise</i>
+        </div>
+        <div class="">
+            <a href="home.html"><i class="fa fa-home"></i></a>
+        </div>
+        <div class="">
+            <i class="fa fa-user"> Nhom4</i>
+        </div>
+    </div>
+</div>
+<div class="create-section">
+    <div class="create-post">
+        <h2>Create Post</h2>
+        <div class="form-container">
+            <div class="menu">
+                <ul>
+                    <li><a href="#"><span class="fa fa-plus"></span> Post</a></li>
+                    <li><a href="#"><span class="fa fa-image"></span> Images & video</a></li>
+                    <li><a href="#"><span class="fa fa-link"></span> Link</a></li>
+                    <li><a href="#"><span class="fa fa-poll"></span> Poll</a></li>
+                </ul>
+            </div>
+            <form th:action="@{/Up_Post_Load}" th:object="${posts}" method="post">
+            <label for="post-title"></label>
+            <input th:field="*{tieude}" type="text" id="post-title" name="post-title" placeholder="title">
+            <label for="post-content"></label>
+            <div class="menu">
+                <ul>
+                    <a href="#"><i class="fas fa-bold"></i></a>
+                    <a href="#"><i class="fas fa-italic"></i></a>
+                    <a href="#"><i class="fas fa-align-left"></i></a>
+                    <a href="#"><i class="fas fa-align-center"></i></a>
+                    <a href="#"><i class="fas fa-align-right"></i></a>
+                    <a href="#"><i class="fas fa-video"></i></a>
+                    <a href="#"><i class="fas fa-post"></i></a>
+                    <a href="#"><i class="fas fa-image"></i></a>
+                    <a href="#"><i class="fas fa-link"></i></a>
+                    <a href="#"><i class="fas fa-poll"></i></a>
+                </ul>
+            </div>
+            <textarea th:field="*{noidung}" id="post-content" name="post-content" placeholder="Text(optional)"></textarea>
+            <div class="submit-buttons">
+                <button type="button">Save Draft</button>
+                <button type="submit">Post</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="create-avatar">
+        <h2>    </h2>
+        <div class="form-container">
+            <div class="avatar-cover">
+                <img th:src="@{/img/avatar.jpg}" alt="Avatar Cover" height="auto">
+                <button class="up">Create Avatar</button>
+            </div>
+            <div class="avatar-info">
+                <!--<label for="avatar-name">Karma</label>
+
+                <label for="avatar-description">Cake day: October 2,2023<span class="fa-stack fa-lg"></span></label>
+                -->
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>

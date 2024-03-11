@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.regiter-container {
+    width: 30%;
+    padding: 20px;
+    background-color: white;
+}
+.button-title{
+text-align: center;
+}
+.regiter-form h5 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 46px;
+    margin-right: 70px;
+}
+.regiter-form h6 {
+    font-size: 14px;
+    color: #7e7b7b;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+
+    border-radius: 20px;
+    border: 1px solid #adabab;
+    width: calc(100% - 60px);
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #adabab;
+}
+.input-group h6 {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 5px 10px;
+    background-color: #adabab;
+    border-radius: 20px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+button {
+    width: 85%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    color: rgb(27, 26, 26);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #adabab;
+}
+
+button:hover {
+    background-color: #030405;
+    color: #ffffff;
+}
+
+.image-container {
+    width: 60%;
+}
+.or-divider {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+    margin-right: 66px;
+    color: #adabab;
+}
+
+.left-divider, .right-divider {
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    border-top: 1px solid #ccc;
+}
+
+.left-divider {
+    left: 0px;
+
+}
+
+.right-divider {
+    right: 0px;
+}
+
+
+.image-container img {
+    margin-top: 200px;
+    width: 90%;
+    display: block;
+
+}
+.Error{
+text-align:center;
+    font-weight: 600;
+    font-size: 0.7rem;
+    color: red;
+}

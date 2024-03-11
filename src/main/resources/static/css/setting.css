@@ -1,0 +1,435 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6rem;
+}
+
+.grid{
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Header */
+.app__header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    box-shadow: .1px 1px 2px rgba(0,0,0,.1);
+    height: 70px;
+}
+
+.header{
+    background-color: #fff;
+    top: 0;
+    position: fixed;
+    height: 70px;
+    display: flex;
+
+
+}
+
+.header__logo-img{
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.header-title{
+    display: flex;
+    flex-direction: column;
+    padding: 6px 20px;
+    justify-content: center;
+}
+
+.header-title__setting{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.header-search{
+    margin-left: 30px;
+    width: 630px;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-search__button{
+    width: 600px;
+    height: 34px;
+    background-color: #c4c4c4;
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.header-search__button > i {
+    font-size: 1.5rem;
+    margin: auto 6px auto 0;
+    cursor: pointer;
+}
+
+.header-search__input{
+    background-color: #c4c4c4;
+    outline: none;
+    border: none;
+    width: 93%;
+}
+
+.header-search__input::placeholder{
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+.header-home > a,.header-help > a,
+.header-notice > a{
+    width: 40px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #111;
+    text-decoration: none;
+    line-height: 70px;
+    height: 70px;
+}
+
+.header-home > a:hover,.header-help > a:hover,
+.header-notice > a:hover,
+.header-account > a:hover{
+    opacity: 0.6;
+}
+
+.header-account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-size: 1.9rem;
+    padding: 0 10px;
+    height: 36px;
+    margin: auto;
+    background-color: #c4c4c4;
+    border-radius: 2px;
+}
+
+.header-account > a{
+    color: #111;
+    text-decoration: none;
+}
+
+.header-account > span{
+    margin-left: 10px;
+}
+
+/* Body */
+.body{
+    margin-top: 70px;
+    padding: 20px 50px;
+}
+
+.body-nav{
+    padding: 0 20px 10px;
+}
+
+.body-nav__list{
+    display: flex;
+    list-style: none;
+}
+
+.body-nav__item{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.body-nav__item-link{
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: bolder;
+    text-decoration: none;
+    display: block;
+}
+
+.body-nav__item:nth-child(1){
+    text-decoration: underline;
+}
+
+.body-content{
+    padding: 0 90px;
+}
+
+.content-header{
+    padding: 16px 0 10px;
+    font-size: 1.6rem;
+}
+
+.content-account,
+.content-connect{
+    padding: 0 10px;
+}
+
+.content-account__title,
+.content-connect__header{
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #666;
+    text-decoration: underline;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.content-account__email{
+    margin-top: 16px;
+}
+
+.content-account__email,
+.content-connect__google,
+.content-account__languages-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-account__email-address,
+.content-account__gender,
+.content-account__languages-web,
+.content-account__languages-content,
+.content-account__location,
+.content-connect__google{
+    padding:0 6px;
+}
+
+.content-account__email-address > h6,
+.content-account__location-title > h6,
+.content-connect__google-title > h6,
+.content-account__gender-title,
+.content-account__web-title,
+.content-account__content-title > h6{
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+.content-account__email-address > span{
+    color: #888;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    display: block;
+    margin-left: 6px;
+}
+
+.content-account__content-btn{
+    width: 100px;
+    border-radius: 20px;
+    height: 30px;
+    color: #0d7ae0;
+    border: 2px solid #0d7ae0;
+    margin-right: 30px;
+    margin-top: 16px;
+}
+
+.content-account__btn-update{
+    border: 2px solid #0d7ae0;
+    border-radius: 20px;
+    color: #0d7ae0;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    padding: 0 10px;
+    height: 32px;
+    margin-right: 50px;
+}
+
+.content-account__btn-update:hover,
+.content-account__content-btn:hover,
+.content-account__gender-btn:hover,
+.content-account__location-btn:hover,
+.content-connect__google-link:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.content-account__gender-btn{
+    margin-top: 16px;
+    border-radius: 20px;
+    padding: 4px 16px;
+    border: 1px solid #0d7ae0;
+    color: #0d7ae0;
+    cursor: pointer;
+}
+
+.content-account__web-btn{
+    margin-top: 16px;
+    padding: 6px 20px;
+    border-radius: 2px;
+    margin-left: 20px;
+    border: none;
+    background-color: #cfcdcd;
+    cursor: pointer;
+}
+
+.content-account__gender,
+.content-account__languages-web,
+.content-account__languages-content,
+.content-account__location,
+.content-connect__google{
+    position: relative;
+    margin-top: 16px;
+}
+.content-account__content-title > span,
+.content-account__location-title > span,
+.content-connect__google-title > span{
+    margin-top: 8px;
+    display: block;
+    font-size: 1.2rem;
+}
+
+.content-connect__google-link{
+    color: #0d7ae0;
+    align-self: flex-end;
+    margin-right: 50px;
+    font-size: 1.1rem;
+}
+
+.content-account__location-btn{
+    margin: 14px 0 30px 40px;
+    border: none;
+    background-color: #cfcdcd;
+    padding: 6px 10px;
+}
+
+.header-search__history{
+    display: none;
+    position: absolute;
+    width: calc(100% - 16px);
+    background-color: #fff;
+    left: 6px;
+    top: 120%;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px #cacaca;
+}
+
+.header-search__history-heading{
+    padding: 16px 0 10px;
+    margin-left: 16px;
+    color: #999;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.header-search__history-list{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.header-search__history-item{
+    height: 38px;
+    padding: 0 16px;
+    line-height: 38px;
+}
+
+.header-search__history-item:hover{
+    background-color: #eeebeb;
+}
+
+.header-search__history-item a{
+    text-decoration: none;
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 400;
+    display: block;
+}
+
+.header-search__input:focus ~ .header-search__history{
+    display: block;
+}
+
+.content-account__gender-choose{
+    z-index: 1;
+    display: none;
+    position: absolute;
+    margin-top: 4px;
+    width: 80px;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px #cacaca;
+}
+
+.content-account__gender-list{
+    list-style: none;
+}
+
+.content-account__gender-item{
+    padding: 8px 10px;
+}
+
+.content-account__gender-item:nth-child(1) > a{
+    text-decoration: underline;
+    color: #0d7ae0;
+    font-weight: bolder;
+}
+
+.content-account__gender-item > a{
+    text-decoration: none;
+    display: block;
+    color: #111;
+    font-size: 1.1rem;
+}
+
+.content-account__gender-item:hover{
+    background-color: #eeebeb;
+}
+
+.content-account__gender-btn:focus ~ .content-account__gender-choose{
+    display: block;
+}
+
+.content-account__language-choose{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 28px;
+    top: 108%;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 5px #cacaca;
+}
+
+.content-account__language-list{
+    list-style: none;
+}
+
+.content-account__language-item{
+    padding: 10px 28px;
+}
+
+.content-account__language-item > a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #333;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.content-account__language-item:nth-child(1) > a{
+    color: #0d7ae0;
+}
+
+.content-account__language-item:hover{
+    background-color: #eeebeb;
+}
+
+.content-account__web-btn:focus ~ .content-account__language-choose{
+    display: block;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORUM LANGUAGES</title>
+    <link rel="stylesheet" th:href="@{/css/setting.css}">
+    <link rel="stylesheet" th:href="@{/font/fontawesome-free-6.4.0-web/css/all.css}">
+    <link rel="icon" th:href="@{/img/background.jpg}">
+</head>
+<body>
+<div class="setting">
+    <div class="app__header">
+        <div class="grid">
+            <header class="header">
+                <div class="header-logo">
+                    <img th:src="@{/img/background.jpg}" alt="" class="header__logo-img">
+                </div>
+
+                <div class="header-title">
+                        <span class="header-title__setting">
+                            Cài đặt tài khoản của bạn
+                        </span>
+                </div>
+
+                <div class="header-search">
+                    <div class="header-search__button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Tìm kiếm..." class="header-search__input">
+                        <div class="header-search__history">
+                            <h3 class="header-search__history-heading">
+                                Lịch sử tìm kiếm
+                            </h3>
+                            <ul class="header-search__history-list">
+                                <li class="header-search__history-item">
+                                    <a href="#">Thông báo bài viết</a>
+                                </li>
+                                <li class="header-search__history-item">
+                                    <a href="#">Quyền riêng tư</a>
+                                </li>
+                                <li class="header-search__history-item">
+                                    <a href="#">Đổi mật khẩu</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-home">
+                    <a href="#"><i class="fa-solid fa-house"></i></a>
+                </div>
+
+                <div class="header-notice">
+                    <a href="#">
+                        <i class="fa-solid fa-bell"></i>
+                    </a>
+                </div>
+                <div class="header-help">
+                    <a href="#">
+                        <i class="header__nav-list-accout-icon fa-solid fa-face-rolling-eyes"></i>
+                    </a>
+                </div>
+                <div class="header-help">
+                    <a href="#">
+                        <span class="header__nav-list-accout-icon " th:text="${setting_name}">hello</span>
+                    </a>
+                </div>
+
+            </header>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="body">
+            <div class="container">
+                <div class="body-nav">
+                    <ul class="body-nav__list">
+                        <li class="body-nav__item"><a href="#" class="body-nav__item-link">Tài khoản</a></li>
+                        <li class="body-nav__item"><a href="" class="body-nav__item-link">Hồ sơ</a></li>
+                        <li class="body-nav__item"><a href="" class="body-nav__item-link">An toàn & riêng tư</a></li>
+                        <li class="body-nav__item"><a href="" class="body-nav__item-link">Thông báo</a></li>
+                        <li class="body-nav__item"><a href="" class="body-nav__item-link">Trợ giúp & hỗ trợ</a></li>
+                    </ul>
+                </div>
+
+                <div class="body-content">
+                    <div class="content-header">
+                        Cài đặt tài khoản
+                    </div>
+
+                    <div class="content-account">
+                        <div class="content-account__title">
+                            <h4>Tuỳ chọn tài khoản</h4>
+                        </div>
+                        <div class="content-account__email">
+                            <div class="content-account__email-address">
+                                <h6>
+                                    Địa chỉ Email
+                                </h6>
+                                <span th:text="${sendemail}">
+                                        outlook123@gmail.com
+                                    </span>
+                            </div>
+                            <button class="content-account__btn-update">
+                                Cập nhật
+                            </button>
+                        </div>
+                        <div class="content-account__gender">
+                            <h6 class="content-account__gender-title">
+                                Giới tính
+                            </h6>
+                            <button class="content-account__gender-btn">
+                                Nam
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <div class="content-account__gender-choose">
+                                <ul class="content-account__gender-list">
+                                    <li class="content-account__gender-item">
+                                        <a href="#">Nam</a>
+                                    </li>
+                                    <li class="content-account__gender-item">
+                                        <a href="#">Nữ</a>
+                                    </li>
+                                    <li class="content-account__gender-item">
+                                        <a href="#">Khác</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content-account__languages-web">
+                            <h6 class="content-account__web-title">
+                                Ngôn ngữ trang web
+                            </h6>
+                            <button class="content-account__web-btn">
+                                Tiếng Việt
+                                <i class="fa-solid fa-caret-down"></i>
+                            </button>
+                            <div class="content-account__language-choose">
+                                <ul class="content-account__language-list">
+                                    <li class="content-account__language-item">
+                                        <a href="#">Tiếng Việt</a>
+                                    </li>
+                                    <li class="content-account__language-item">
+                                        <a href="#">English</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="content-account__languages-content">
+                            <div class="content-account__content-title">
+                                <h6>
+                                    Ngôn ngữ nội dung
+                                </h6>
+                                <span>
+                                        Thêm ngôn ngữ bạn muốn xem bài đăng, đề xuất của cộng đồng và nội dung khác
+                                    </span>
+                            </div>
+                            <button class="content-account__content-btn">
+                                Thay đổi
+                            </button>
+                        </div>
+                        <div class="content-account__location">
+                            <div class="content-account__location-title">
+                                <h6>
+                                    Tuỳ chỉnh vị trí
+                                </h6>
+                                <span>
+                                        Cho biết vị trí được hưởng lợi từ các đề xuất và nguồn cấp dữ liệu được cá nhân hoá
+                                    </span>
+                            </div>
+                            <button class="content-account__location-btn">
+                                Sử dụng vị trí chính xác (dựa trên IP)
+                                <i class="fa-solid fa-caret-down"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="content-connect">
+                        <div class="content-connect__header">
+                            <h4>Tài khoản được kết nối</h4>
+                        </div>
+                        <div class="content-connect__google">
+                            <div class="content-connect__google-title">
+                                <h6>
+                                    Đã kết nối với Google
+                                </h6>
+                                <span>
+                                        Kết nối tài khoản của bạn để đăng nhập Forum Languages với Google
+                                    </span>
+                            </div>
+
+                            <a href="" class="content-connect__google-link">
+                                (Ngắt kết nối)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+
+        </footer>
+    </div>
+</div>
+</body>
+</html>
