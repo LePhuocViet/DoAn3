@@ -63,13 +63,16 @@
                     </div>
 
                     <div class="header__selection-2">
+                        <form th:action="@{/Home}" method="get">
                         <div class="header__search-2">
-                            <input type="text" placeholder="Tìm kiếm bài viết" class="header__search-input">
-                        </div>
-                        <button class="header__search-logo">
-                            <i class="header__search-icon fa-solid fa-magnifying-glass"></i>
-                        </button>
 
+                            <input name="search" type="text" placeholder="Tìm kiếm bài viết" class="header__search-input">
+                            <button class="header__search-logo">
+                                <i class="header__search-icon fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+
+                        </form>
                     </div>
                 </div>
 
@@ -80,7 +83,8 @@
     <div class="container">
         <div class="grid">
             <div class="grid__row-nowrap">
-                <div class="grid__row-3 grid__padding"  th:each="posts : ${postslist}">
+                <th:block th:if="${notnull}">
+                <div class="grid__row-3 grid__padding"  th:each="posts : ${searchpost}">
                     <div class="container__item-product">
                         <div class="product__list-item ">
                             <h4 class="product__list-item-title" th:text="${posts.tieude}">How To Get High Score</h4>
@@ -88,6 +92,17 @@
                         </div>
                     </div>
                 </div>
+                </th:block>
+                <th:block th:unless="${notnull}">
+                    <div class="grid__row-3 grid__padding"  th:each="posts : ${postslist}">
+                        <div class="container__item-product">
+                            <div class="product__list-item ">
+                                <h4 class="product__list-item-title" th:text="${posts.tieude}">How To Get High Score</h4>
+                                <span class="product__list-item-price" th:text="${posts.noidung}">There are many ways to achieve high scores in studying. Here are some ways for you to achieve high scores</span>
+                            </div>
+                        </div>
+                    </div>
+                </th:block>
             </div>
             <div class="container__end">
             </div>
