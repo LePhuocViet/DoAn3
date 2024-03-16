@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 30%;
+    padding: 20px;
+    background-color: white;
+}
+
+.login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 46px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #adabab;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    color: rgb(27, 26, 26);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #adabab;
+}
+
+button:hover {
+    background-color: #030405;
+    color: #ffffff;
+}
+
+.image-container {
+    width: 60%;
+}
+.or-divider {
+    position: relative;
+    text-align: center;
+    margin: 20px 0;
+    color: #adabab;
+}
+
+.left-divider, .right-divider {
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    border-top: 1px solid #ccc;
+}
+
+.left-divider {
+    left: 0;
+}
+
+.right-divider {
+    right: 0;
+}
+
+
+.image-container img {
+    margin-top: 200px;
+    width: 90%;
+    display: block;
+
+}
